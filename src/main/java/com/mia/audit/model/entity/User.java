@@ -1,5 +1,5 @@
 package com.mia.audit.model.entity;
-import java.security.PublicKey;
+
 
 
 import jakarta.persistence.Entity;
@@ -22,13 +22,15 @@ public class User {
 	private String pwd;
 	@Enumerated(EnumType.STRING)
 	private Role role;
+	private String pilote;
 	public User() {}
-	public User(Long id, String firstname, String lastname, String pwd, Role role) {
+	public User(Long id, String firstname, String lastname, String pwd, Role role, String pilote) {
 		this.id = id;
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.pwd = pwd;
 		this.role = role;
+		this.pilote = pilote;
 	}
 	public Long getId() {
 		return id;
@@ -61,5 +63,12 @@ public class User {
 	public void setRole(Role role) {
 		this.role = role;
 	}
+	public String getPilote() {
+		return pilote;
+	}
+	public void setPilote(String pilote) {
+		this.pilote = pilote;
+	}
+	
 
 }
